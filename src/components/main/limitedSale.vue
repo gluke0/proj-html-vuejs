@@ -22,9 +22,9 @@ export default {
         <div>
 
             <div id="front-man">
-                <div>
+                <h1>
                     Start your Human Revolution today
-                </div>
+                </h1>
                 <div>
                     A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
                 </div>
