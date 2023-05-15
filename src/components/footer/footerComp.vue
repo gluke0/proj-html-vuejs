@@ -91,7 +91,6 @@ footer{
             
             h4{
                 margin-bottom: 2rem;
-                font-weight: bold;
                 color: black;
             }
 
