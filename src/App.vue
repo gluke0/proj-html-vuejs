@@ -24,16 +24,23 @@ export default{
 
 <template>
 
+    <div>
+
     <headerComp></headerComp>
 
     <mainComp></mainComp>
 
     <footerComp></footerComp>
 
+    </div>
+
 
 </template>
 
 
 <style lang="scss" scoped>
+
+@use '../src/style/main.scss';
+@use '../src/style/partials/variables';
 
 </style>
