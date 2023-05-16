@@ -105,7 +105,7 @@ export default {
 
 .limited{
     background-color: variables.$buttercup;
-    top: 40rem;
+    top: 36rem;
     left: 13.5rem;
 
     .lim{
