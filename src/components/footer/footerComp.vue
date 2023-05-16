@@ -6,6 +6,29 @@ export default {
     },
     data() {
         return{
+            listO: [
+                {
+                    menu: 'Blog',
+                },
+                {
+                    menu: 'Home',
+                },
+                {
+                    menu: 'Shortcodes',
+                },
+            ],
+            listT: [
+                {   
+                    menu: 'Courses',
+                },
+                {
+                    menu: 'Membership A...',
+                },
+                {
+                    menu: 'Typography',
+                },
+
+            ]
         }
     },
     methods:{
@@ -21,12 +44,12 @@ export default {
         <div class="container d-flex justify-content-between">
             <div class="card">
                 <h4 class="text-uppercase">about</h4>
-                <div>Masterstudy is Education WordPress theme featured by Learning Management System (LSM) for online education.</div>
+                <div class="fs-6">Masterstudy is Education WordPress theme featured by Learning Management System (LSM) for online education.</div>
                 <div>Developed by Stylemix Themes.</div>
                 <div class="mt-2">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter mx-3"></i>
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter mx-3"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
             <div class="card">
@@ -34,20 +57,20 @@ export default {
                 <div class="mb-3">USA, California 20, First Avenue, California</div>
                 <div> Tel.: +1 212  458 300 32</div>
                 <div>Fax.: +1 212 375 24 14</div>
-                <div class="mt-3">info@masterstudy.com</div>
+                <a class="mt-3" href="malito:info@masterstudy.com">info@masterstudy.com</a>
             </div>
             <div class="card">
                 <h4 class="text-uppercase">pages</h4>
                 <div class="d-flex">
                     <ul class="lh-lg ps-3">
-                        <li>Blog</li>
-                        <li>Home</li>
-                        <li>Shortcodes</li>
+                        <li v-for="item in listO">
+                        <a href="#" >{{ item.menu }}</a> 
+                        </li>
                     </ul>
                     <ul class="lh-lg">
-                        <li>Courses</li>
-                        <li>Membership A...</li>
-                        <li>Typography</li>
+                        <li v-for="item in listT">
+                        <a href="#" >{{ item.menu }}</a> 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +106,7 @@ footer{
     background-color: variables.$buttercup;
 
     .container{
-        width: 75%;
+        width: 70%;
         color: rgb(121, 116, 116);
         
         .card{
@@ -106,6 +129,10 @@ footer{
                 font-size: x-small;
                 margin-top: 0.5rem;
                 color: rgb(121, 116, 116);
+            }
+
+            a{
+                text-decoration: none;
             }
 
         }

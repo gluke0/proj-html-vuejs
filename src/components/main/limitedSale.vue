@@ -1,8 +1,12 @@
 <script>
  
+ import countDown from './countDown.vue';
+
+
 export default {
     name: 'limitedSale',
     components:{
+        countDown,
     },
     data() {
         return{
@@ -45,7 +49,7 @@ export default {
                 </div>
             </div>
             <div class="lim-right lim d-flex justify-content-center align-items-center">
-                COUNT DOWN
+                <countDown></countDown>
             </div>
         </div>
 
@@ -125,6 +129,7 @@ export default {
         width: 20rem;
         padding: 1.09rem;
         border-radius: 1.5rem;
+        margin-top: 0.2rem;
     }
     
     button{
@@ -133,8 +138,8 @@ export default {
         background-color: rgb(45, 70, 73);
         border-radius: 1.5rem;
         font-size: smaller;
-        margin-left: - 2.5rem;
-        padding: 1.2rem;
+        margin-left: - 3rem;
+        padding: 1.3rem;
     }
 }
 

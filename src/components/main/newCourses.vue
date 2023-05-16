@@ -165,7 +165,7 @@ section{
                 font-weight: bold;
                 filter: opacity(0);
                 width: 100%;
-                height: 58%;
+                height: 50%;
                 background-color: rgba(0, 0, 0, 0.4);
                 
 
@@ -196,6 +196,10 @@ section{
         background-color: variables.$buttercup;
         color: white;
         font-size: 1.5rem;
+
+        &:hover{
+            background-color: rgb(210, 167, 63)
+        }
     }
 }
 

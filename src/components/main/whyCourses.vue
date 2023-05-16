@@ -8,7 +8,8 @@ export default {
         return{
         }
     },
-    methods:{
+    methods:{ 
+
     },
 }
 
@@ -81,6 +82,10 @@ export default {
         box-shadow: 4px 4px 4px #b8b7b743;
         width: calc(100% / 2 - 1rem);
         margin: 0.5rem;
+
+        &:hover{
+            background-color: variables.$buttercup;
+        }
 
         .fa-solid, .fa-regular{
             font-size: 2.5rem;
