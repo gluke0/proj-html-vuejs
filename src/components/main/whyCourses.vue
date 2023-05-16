@@ -20,7 +20,7 @@ export default {
     <section class="container">
         <h2 class="my-5 text-center">Why my Courses?</h2>
 
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap mb-5">
 
             <div class="card d-flex">
                 <div class="d-flex">

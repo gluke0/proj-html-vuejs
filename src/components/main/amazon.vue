@@ -30,6 +30,15 @@ export default {
                 <img class="book" src="../../assets/images/book.png" alt="Book Template Image">
             </div>
         </div>
+        <div id="sidebar" class="lh-lg text-center">
+            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-solid fa-life-ring"></i>
+            <i class="fa-solid fa-wrench"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+
+
     </section>
     
 </template>
@@ -43,6 +52,7 @@ export default {
 #amazon{
     background-image: url(../../assets/images/slider_1-1917x607-1914x606.jpg);
     background-size: cover;
+    width: 100%;
 }
 
 .container{
@@ -68,6 +78,25 @@ export default {
     .book{
         width: 80%;
     }
+
 }
+
+#sidebar{
+    background-color: white;
+    height: fit-content;
+    width: 2rem;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    z-index: 1;
+
+
+    .fa-solid{
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+   
 
 </style>
