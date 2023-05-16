@@ -1,4 +1,6 @@
 <script>
+
+import {store} from '../../store'
  
 export default {
     name: 'headerApp',
@@ -6,33 +8,7 @@ export default {
     },
     data() {
         return{
-            navbar: [
-                {
-                    menu: 'Courses',
-                    new: false,
-                    active: false,
-                },
-                {
-                    menu: 'Courses Formats',
-                    new: false,
-                    active: false,
-                },
-                {
-                    menu: 'Add Course',
-                    new: true,
-                    active: false,
-                },
-                {
-                    menu: 'Pages',
-                    new: false,
-                    active: false,
-                },
-                {
-                    menu: 'Demos',
-                    new: false,
-                    active: true,
-                },
-            ]
+            store
         }
     },
     methods:{
@@ -51,9 +27,9 @@ export default {
 
         <div id="navbar">
             <ul class="d-flex align-items-center">
-                <li v-for="item in navbar">
-                    <a href="#" :class="{active: item.active == true}">{{ item.menu }}</a> 
-                    <span class="label" v-if="item.new">NEW</span>
+                <li v-for="(elem, index) in store.navbar">
+                    <a href="#" :class="{active: elem.active == true}">{{ elem.menu }}</a> 
+                    <span class="label" v-if="elem.new">NEW</span>
                 </li>
             </ul>
         </div>

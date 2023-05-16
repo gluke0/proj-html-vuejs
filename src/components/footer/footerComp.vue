@@ -1,34 +1,14 @@
 <script>
  
+import {store} from '../../store'
+
 export default {
     name: 'footerComp',
     components:{
     },
     data() {
         return{
-            listO: [
-                {
-                    menu: 'Blog',
-                },
-                {
-                    menu: 'Home',
-                },
-                {
-                    menu: 'Shortcodes',
-                },
-            ],
-            listT: [
-                {   
-                    menu: 'Courses',
-                },
-                {
-                    menu: 'Membership A...',
-                },
-                {
-                    menu: 'Typography',
-                },
-
-            ]
+            store
         }
     },
     methods:{
@@ -63,12 +43,12 @@ export default {
                 <h4 class="text-uppercase">pages</h4>
                 <div class="d-flex">
                     <ul class="lh-lg ps-3">
-                        <li v-for="item in listO">
-                        <a href="#" >{{ item.menu }}</a> 
+                        <li v-for="(elem, index) in store.listO">
+                        <a href="#" >{{ elem.menu }}</a> 
                         </li>
                     </ul>
                     <ul class="lh-lg">
-                        <li v-for="item in listT">
+                        <li v-for="(item, index) in store.listT">
                         <a href="#" >{{ item.menu }}</a> 
                         </li>
                     </ul>

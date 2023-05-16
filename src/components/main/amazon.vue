@@ -37,8 +37,6 @@ export default {
             <i class="fa-solid fa-cart-shopping"></i>
             <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
-
-
     </section>
     
 </template>
@@ -77,6 +75,7 @@ export default {
 
     .book{
         width: 80%;
+        cursor: pointer;
     }
 
 }

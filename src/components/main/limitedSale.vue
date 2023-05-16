@@ -1,6 +1,7 @@
 <script>
  
  import countDown from './countDown.vue';
+ import {store} from '../../store'
 
 
 export default {
@@ -10,6 +11,7 @@ export default {
     },
     data() {
         return{
+            store,
         }
     },
     methods:{
@@ -43,17 +45,17 @@ export default {
                 <h5 class="title-sale">
                     <span class="sale">Limited Sale:</span> All courses with 55% off
                 </h5>
-                <div class="email">
-                    <input type="input" name="email" id="email" placeholder="Enter your E-mail">
+                <form class="email" @submit.prevent="subscribe">
+                    <input v-model="this.store.newEmail" type="input" name="email" id="email" placeholder="Enter your E-mail">
                     <button class=" text-uppercase">subscribe</button>
-                </div>
+                </form>
             </div>
             <div class="lim-right lim d-flex justify-content-center align-items-center">
                 <countDown></countDown>
             </div>
         </div>
 
-        <div class="container d-flex py-5 mt-5">
+        <div class="container d-flex py-5 sign">
 
             <div class="sec left">
                 <h5>
@@ -143,6 +145,9 @@ export default {
     }
 }
 
+.sign{
+    margin-top: 5rem;
+}
 .left{
     padding-right: 4rem;
     width: 35%;
